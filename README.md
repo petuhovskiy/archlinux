@@ -15,7 +15,8 @@ Installation date: 2020-01-09
 3. Boot
     - connect wifi
 4. Manjaro Hello
-    - choose and install applications
+    - update mirrors `sudo pacman-mirrors --geoip && sudo pacman -Syyu`
+    - choose and install applications*
 5. Copy .ssh to new home
     - clone this repo
 6. Settings manager
@@ -26,6 +27,12 @@ Installation date: 2020-01-09
 7. pacman-manager
     - install Telegram Desktop
         - ttf-opensans
+    - docker
+        - `systemctl enable --now docker`
+        - `sudo usermod -aG docker $USER`
+    - docker-compose
+    - go
+    - freerdp
 8. bauh (Suggestions)
     - google-chrome (aur)
     - Zoom (Flatpak)
@@ -41,6 +48,23 @@ Installation date: 2020-01-09
 11. Git config
     - `git config --global user.email "petuhovskiy@yandex.ru"`
     - `git config --global user.name "Arthur Petukhovsky"`
+12. bauh (AUR)
+    - golangci-lint-bin
+13. Install wireguard
+    - Install
+        - linux54-headers (linux-headers)
+        - dkms
+        - wireguard-dkms
+        - wireguard-tools
+    - `modprobe wireguard`
+    - Create config /tmp/name.conf
+    - `nmcli connection import type wireguard file name.conf`
+    - `nmcli connection up nmcli`
+    - `nmcli connection`
+14. Enable nvidia card
+    - Open Manjaro Settings Manager
+    - Auto install proprietary driver
+    - Reboot
 
 TODO:
 
