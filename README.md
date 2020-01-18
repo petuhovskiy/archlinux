@@ -7,7 +7,7 @@ Installation date: 2020-01-09
 
 1. Download [Manjaro XFCE](https://manjaro.org/download/#xfce)
 2. Install
-    - root password = manjaro
+    - livecd root password = manjaro
     - en-US
     - Install to existing partition (prev Windows)
     - Install FreeOffice
@@ -65,7 +65,15 @@ Installation date: 2020-01-09
     - Open Manjaro Settings Manager
     - Auto install proprietary driver
     - Reboot
-
-TODO:
-
-1. Swap?
+15. Build Clickhouse
+    - install cmake, ninja, python
+    - `git clone --recursive --branch master https://github.com/ClickHouse/ClickHouse.git`
+    - https://clickhouse.yandex/docs/en/development/build/#build-clickhouse
+16. Add OpenVPN
+    - `sudo nmcli connection import type openvpn file client.conf`
+17. Enable swap
+  - `sudo fallocate -l 8G /swapfile`
+  - `sudo mkswap /swapfile`
+  - `sudo chmod u=rw,go= /swapfile`
+  - `sudo swapon /swapfile`
+  - `sudo bash -c "echo /swapfile none swap defaults 0 0 >> /etc/fstab"`
