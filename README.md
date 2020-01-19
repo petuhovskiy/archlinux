@@ -72,8 +72,15 @@ Installation date: 2020-01-09
 16. Add OpenVPN
     - `sudo nmcli connection import type openvpn file client.conf`
 17. Enable swap
-  - `sudo fallocate -l 8G /swapfile`
-  - `sudo mkswap /swapfile`
-  - `sudo chmod u=rw,go= /swapfile`
-  - `sudo swapon /swapfile`
-  - `sudo bash -c "echo /swapfile none swap defaults 0 0 >> /etc/fstab"`
+    - `sudo fallocate -l 8G /swapfile`
+    - `sudo mkswap /swapfile`
+    - `sudo chmod u=rw,go= /swapfile`
+    - `sudo swapon /swapfile`
+    - `sudo bash -c "echo /swapfile none swap defaults 0 0 >> /etc/fstab"`
+
+
+## Manjaro VM Fun
+
+Installation date: 2020-01-19
+
+TODO:
